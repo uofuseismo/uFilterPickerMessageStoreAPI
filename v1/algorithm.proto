@@ -1,5 +1,5 @@
 edition = "2023";
-package UFilterPickerProxyAPI.V1;
+package UFilterPickerMessageStoreAPI.V1;
 
 message Algorithm {
     string name = 1 [default = "uFilterPicker"]; /// The algorithm (version) that generated this pick.
