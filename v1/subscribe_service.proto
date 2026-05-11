@@ -11,8 +11,9 @@ import "uFilterPickerPickBrokerAPI/v1/stream_since_request.proto";
  */
 service SubscribeService {
     /*! 
-     * The producer sends its picks to this end point.
-     * When finished returns of summary of picks sent.
+     * Continually streams picks starting at a given point in the past.  Note,
+     * this is best effort and if the request extends beyond the broker's configured
+     * maximum memory then the requested picks may no longer be available.
      */
-    rpc StreamSince(StreamSinceRequest ) returns(stream Pick) {}; 
+    rpc StreamSince(StreamSinceRequest) returns(stream Pick) {}; 
 }
